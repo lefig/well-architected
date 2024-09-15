@@ -15,6 +15,11 @@ const site = "https://biomejs.dev";
 export default defineConfig({
 	site,
 	output: "static",
+	// adapter: cloudflare({
+	// 	platformProxy: {
+	// 	  enabled: true
+	// 	}
+	//   }),
 
 	compressHTML: true,
 
@@ -439,10 +444,6 @@ export default defineConfig({
 			],
 		},
 	},
-
-	adapter: netlify({
-		imageCDN: false,
-	}),
 
 	vite: {
 		resolve: {
